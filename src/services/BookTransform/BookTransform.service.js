@@ -29,15 +29,4 @@ const transformer = ({
 });
 
 
-export const createMockBook = () => ({
-  id: faker.random.number(),
-  book_author: faker.random.word(),
-  book_title: faker.random.word(),
-  book_publication_year: faker.random.number(),
-  book_publication_country: faker.random.word(),
-  book_publication_city: faker.random.word(),
-  book_pages: faker.random.number()
-});
-
-
 export default transformer;
