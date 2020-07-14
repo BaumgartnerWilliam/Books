@@ -1,8 +1,7 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 
 const Book = ({ id, author, title, year, country, city, pages }) => (
-  // todo: add react-int to handle pluralization
   <Card className="book-card">
     <Card.Body>
       <Card.Title className="book-card--title">Title: {title}</Card.Title>
