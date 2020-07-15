@@ -5,10 +5,7 @@ import Book from '../Book/Book';
 const BookList = ({ books = [], loading }) => (
   <Container className="book-list pt-5">
     {loading && (
-      <Col
-        xs={{ span: 6, offset: 5 }}
-        md={{ span: 4, offset: 5 }}
-        className="mt-5">
+      <Col className="d-flex justify-content-center align-items-center flex-column mt-5">
         <Spinner animation="border" role="status">
           <span className="sr-only">Loading...</span>
         </Spinner>
