@@ -2,7 +2,7 @@ import React from 'react';
 import { Card } from 'react-bootstrap';
 
 const Book = ({ id, author, title, year, country, city, pages }) => (
-  <Card border="primary" className="book-card w-100 h-100 mt-5">
+  <Card border="primary" className="book-card w-100 h-100">
     <Card.Body>
       <Card.Title className="book-card--title">Title: {title}</Card.Title>
       <Card.Subtitle className="mb-2 text-muted book-card--id">
