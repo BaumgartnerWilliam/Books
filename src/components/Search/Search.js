@@ -1,7 +1,7 @@
 import React from 'react';
 import { InputGroup, FormControl, Button, Container } from 'react-bootstrap';
 
-const Search = ({ onChange, children }) => (
+const Search = ({ onChange, children, initialValue }) => (
   <Container>
     <InputGroup className="search-bar">
       <InputGroup.Prepend>
@@ -11,6 +11,7 @@ const Search = ({ onChange, children }) => (
         placeholder="Search"
         aria-label="Search"
         aria-describedby="search-input"
+        defaultValue={initialValue}
         onChange={e => onChange(e.target.value)}
       />
       {children}
