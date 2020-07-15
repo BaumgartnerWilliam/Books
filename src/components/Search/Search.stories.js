@@ -8,6 +8,12 @@ export default { title: 'Search' };
 
 const props = {
   onChange: value => action('onChange', value)
-}
+};
 
 export const withOnchange = () => <Search {...props} />;
+export const withButtons = () => (
+  <Search {...props}>
+    <Search.Previous onClick={action('prev')} />
+    <Search.Next onClick={action('next')} />
+  </Search>
+);
