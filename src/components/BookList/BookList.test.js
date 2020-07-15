@@ -9,11 +9,3 @@ test('renders without errors', () => {
   const el = container.querySelector(bookCardClass);
   expect(el).toBeTruthy();
 });
-//
-// fields.forEach(field => {
-//   test(`renders ${field} properly`, () => {
-//     const { container } = render(<Book {...mockData} />);
-//     const fieldEl = container.querySelector(`${bookCardClass}--${field}`);
-//     expect(fieldEl.textContent).toContain(mockData[field]);
-//   });
-// });
