@@ -1,12 +1,22 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import Book from '../Book/Book';
 
-const BookList = ({ books = [] }) => (
-  <Container className="book-list">
+const BookList = ({ books = [], loading }) => (
+  <Container className="book-list pt-5">
+    {loading && (
+      <Col
+        xs={{ span: 6, offset: 5 }}
+        md={{ span: 4, offset: 5 }}
+        className="mt-5">
+        <Spinner animation="border" role="status">
+          <span className="sr-only">Loading...</span>
+        </Spinner>
+      </Col>
+    )}
     <Row>
-      {books.map(book => (
-        <Col xs={6} md={3}>
+      {books.map((book, id) => (
+        <Col key={id} xs={6} md={3}>
           <Book {...book} />
         </Col>
       ))}
