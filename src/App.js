@@ -67,7 +67,10 @@ function App() {
     fetchBooks({ page, search }).then(response => {
       setLoading(false);
       setBooks(response.data.books.map(dataTransform));
-    });
+    }).catch(() => {
+      setLoading(false);
+      setBooks(undefined);
+    })
   }, [page, search]);
 
   return (
