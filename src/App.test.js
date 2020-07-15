@@ -1,6 +1,5 @@
 import React from 'react';
 import { MemoryRouter as Router, Route, Switch } from 'react-router-dom';
-import { act } from 'react-dom/test-utils';
 import { render } from '@testing-library/react';
 import App from './App';
 
@@ -15,6 +14,6 @@ const setupApp = () => (
 );
 
 test('renders without errors', () => {
-  const { container } = render(act(setupApp));
+  const { container } = render(setupApp());
   expect(container).toBeInTheDocument();
 });
