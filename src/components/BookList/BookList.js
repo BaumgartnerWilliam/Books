@@ -16,7 +16,7 @@ const BookList = ({ books = [], loading }) => (
     )}
     <Row>
       {books.map((book, id) => (
-        <Col key={id} xs={6} md={3}>
+        <Col key={id} xs={12} md={6} className="mb-2">
           <Book {...book} />
         </Col>
       ))}
