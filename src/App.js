@@ -1,9 +1,7 @@
 import './App.scss';
 
-import React, { useCallback, useEffect, useState } from 'react';
-import { Container } from 'react-bootstrap';
+import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import axios from 'axios';
 import queryString from 'query-string';
 import Main from './container/Main/Main';
@@ -62,7 +60,7 @@ function App() {
   //todo: negative pages on user input
   useEffect(() => {
     history.push(`${path}?page=${page}&search=${search}`);
-  }, [page, search]);
+  }, [page, search, history, path]);
 
   useEffect(() => {
     setLoading(true);
