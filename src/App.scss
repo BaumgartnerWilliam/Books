@@ -1,0 +1,12 @@
+/* The following block can be included in a custom.scss */
+
+/* make the customizations */
+
+$primaryColor: #1d7874;
+
+$theme-colors: (
+    "primary": $primaryColor,
+);
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
